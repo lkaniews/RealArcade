@@ -16,44 +16,40 @@ class Game
 
 	def scenario
 		if @player1.choice == "rock" && @player2.choice == "scissors" 
-			@player_one.wins += 1 
-			"player one wins!" 
-	
+			@player1.wins += 1 
+			"player one wins! {@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
+
 		elsif @player1.choice == "rock" && @player2.choice == "paper"
-			@player_two.wins +=1 
-			 "player two wins!" 
-
+			@player2.wins +=1 
+			 "player two wins! #{@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
+		
 		elsif @player1.choice == "rock" && @player2.choice == "rock"
-			"Tie" 
-
+			"Tie, #{@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
+		
 		elsif @player1.choice == "paper" && @player2.choice == "scissors" 
-			@player_two.wins +=1 
-			 "player two wins!" 
-	
+			@player2.wins +=1 
+			 "player two wins! #{@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
+		
 		elsif @player1.choice == "paper" && @player2.choice == "rock"
-			@player_one.wins +=1
-			"player one wins!"  
-
+			@player1.wins +=1
+			"player one wins! #{@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
+		
 		elsif @player1.choice == "paper" && @player2.choice == "paper"
-			@player_one.wins +=1 
-			"player one wins!" 
+			@player1.wins +=1 
+			"player one wins! #{@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
 		
 		elsif @player1.choice == "scissors" && @player2.choice == "paper" 
-			@player_one.wins +=1 
-			"player one wins!" 
-	
-		elsif @player1.choice == "scissors" && player2.choice == "rock"
-			@player_two.wins +=1 
-			"player two wins!" 
-
+			@player1.wins +=1 
+			"player one wins! #{@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
+		
+		elsif @player1.choice == "scissors" && @player2.choice == "rock"
+			@player1.wins +=1 
+			"player two wins! #{@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
+		
 		elsif @player1.choice == "scissors" && @player2.choice == "scissors"
-			"Tie!"
+			"Tie! #{@player1.name} = #{@player1.wins}, #{@player2.name} = #{@player2.wins}"
 		else
 			"nadda"
 		end
-	end
-
-	def scoreboard 
-		"#{@player1.name} = #{@player1.wins}, #{@player2.name} = #{player2.wins}"
 	end
 end

@@ -13,15 +13,15 @@ post '/' do
 	p1.choice = params[:player_one]
 	p2.choice = params[:player_two]
 	game.scenario
-	game.wins
-	@wins = game.scoreboard
-	erb :results
+	@wins = game.scenario
+	
+	
 end
 
 
 get '/a' do 
-	results = session[:results]
-	game.results
+	results = session[:scoreboard]
+	game.scoreboard
 end
 
 
